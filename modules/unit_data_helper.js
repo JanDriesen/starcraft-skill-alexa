@@ -6,6 +6,9 @@ const SPECIES_TERRAN = 'terran';
 
 function UnitDataHelper (){}
 
+/*
+ * Loads from the model files the units for the species
+ */
 UnitDataHelper.prototype.getUnitsForSpecies = function (species) {
     if (species == SPECIES_PROTOSS || species == SPECIES_ZERG || species == SPECIES_TERRAN) {
 
