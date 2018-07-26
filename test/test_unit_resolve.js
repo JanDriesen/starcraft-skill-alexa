@@ -13,6 +13,25 @@ var _ = require('lodash');
 describe('UnitDataHelper', function () {
     var subject = new UnitDataHelper();
 
+    describe('#getSpeciesForUnit(unit)', function () {
+        context('with a valid protoss unit', function () {
+            var unit = "Zealot";
+            var isSpecies = "protoss";
+            it('returns a protoss species string', function() {
+                var species = subject.getSpeciesForUnit(unit);
+                return expect(species).to.be.eq(isSpecies);
+            });
+        });
+
+        context('with a invalid unit', function () {
+            var unit = "Orc";
+            it('returns null', function() {
+                var species = subject.getSpeciesForUnit(unit);
+                return expect(species).to.be.eq(null);
+            });
+        });
+    });
+
     describe('#getUnitsForSpecies(species)', function () {
 
         // should only respond on 'protoss', 'zerg' or 'terran'
