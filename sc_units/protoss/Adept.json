@@ -1,0 +1,50 @@
+{
+    "species": "Protoss",
+    "name": "Adept",
+    "description": "Ranged specialist. Can use Psionic Transfer",
+    "shortcut": "A",
+    "requirements": [
+        "buildings: Warp Gate",
+        "buildings: Twilight Council"
+    ],
+    "canAttack": [
+        "ground"
+    ],
+    "shields": 70,
+    "life": 70,
+    "armor": 1,
+    "energy": 0,
+    "abilities": [{
+        "name": "Psionic Transfer",
+        "shortcut": "F",
+        "description": "Projects an invulnerable Shade that can move but cannot attack. After 7 seconds, the Adept teleports to the Shade's location.",
+        "requirements": [
+            "upgrades: Research Resonating Glaives"
+        ]
+    }, {
+        "name": "Resonating Glaives",
+        "shortcut": "Passive",
+        "description": "Increases the attack speed of Adepts by 45%",
+        "requirements": [
+            "Twilight Council"
+        ]
+    }],
+    "strongAgainst": {
+        "terran": "Marines",
+        "zerg": "Zergling",
+        "protoss": "Zealot"
+
+    },
+    "weakAgainst": {
+        "terran": "Marauder",
+        "zerg": "Roach",
+        "protoss": "Stalker"
+    },
+    "upgrades": [{
+        "name": "Research Resonating Glaives",
+        "requirements": [
+            "buildings: Twilight Council"
+        ],
+        "ability": "Resonating Glaives"
+    }]
+}

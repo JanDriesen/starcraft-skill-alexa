@@ -1,0 +1,52 @@
+{
+    "species": "Protoss",
+    "name": "Sentry",
+    "description": "Energy manipulator unit. Can use Force Field, Guardian Shield and Hallucination",
+    "shortcut": "S",
+    "requirements": [
+        "Warp Gate",
+        "RESEARCH"
+    ],
+    "canAttack": [
+        "ground",
+        "air"
+    ],
+    "shields": 40,
+    "life": 40,
+    "armor": 1,
+    "energy": 200,
+    "abilities": [{
+        "name": "Force Field",
+        "shortcut": "F",
+        "description": "Barrier that lasts 11 seconds and impedes movement of ground units. Massive units will shatter Force Fields on contact.",
+        "requirements": [
+            "Basis"
+        ]
+    }, {
+        "name": "Guardian Shield",
+        "shortcut": "G",
+        "description": "Creates a range 4 aura that reduces incoming ranged damage to friendly units by 2. Lasts 11 seconds.",
+        "requirements": [
+            "Basis"
+        ]
+    }, {
+        "name": "Hallucination",
+        "shortcut": "C",
+        "description": "Creates hallucinations that cannot use active abilities, cannot deal damage and die more easily. Hallucinations last 43 seconds. Enemy detectors reveal hallucinations.",
+        "requirements": [
+            "Basis"
+        ]
+    }],
+    "strongAgainst": {
+        "terran": "Marines",
+        "zerg": "Zergling",
+        "protoss": "Zealot"
+
+    },
+    "weakAgainst": {
+        "terran": "Thor",
+        "zerg": "Ravager",
+        "protoss": "Archon"
+    },
+    "upgrades": []
+}
