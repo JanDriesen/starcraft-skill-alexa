@@ -1,4 +1,5 @@
 {
+    "species": "Protoss",
     "name": "Probe",
     "description": "Basic worker unit. Can gather resources and warp in Protoss structures",
     "shortcut": "P",
