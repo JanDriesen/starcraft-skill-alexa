@@ -9,7 +9,7 @@ var UnitHelper = require('./modules/unit_data_helper');
 
 // launch without intent
 app.launch(function (req, res) {
-    var prompt = "Willkommen bei StarCraft Info";
+    var prompt = "Welcome to StarCraft Help";
     res.say(prompt).reprompt(prompt).shouldEndSession(false);
 });
 
@@ -22,11 +22,28 @@ app.intent('versusIntent', {
         '{SPECIES} {vs.|versus|gegen} {UNIT}'
     ]
 }, function (req, res) {
-    var species = req.slots['SPECIES'].value;
-    var unitName = req.slots['UNIT'].value;
+
+    var species = "";
+    var unitName = "";
+    var speciesSlot = req.slots['SPECIES'];
+    var unitNameSlot = req.slots['UNIT'];
+
+    for (var i = 0; i < speciesSlot.resolutions.length; i++) {
+        var resolution = speciesSlot.resolution(i);
+        if (resolution.status == 'ER_SUCCESS_MATCH') {
+            species = resolution.first().name;
+        }
+    }
+
+    for (var i = 0; i < unitNameSlot.resolutions.length; i++) {
+        var resolution = unitNameSlot.resolution(i);
+        if (resolution.status == 'ER_SUCCESS_MATCH') {
+            unitName = resolution.first().name;
+        }
+    }
 
     if (_.isEmpty(species) || _.isEmpty(unitName)) {
-        var prompt = "Das konnte ich nicht verstehen.";
+        var prompt = "oh.";
         return res.say(prompt).shouldEndSession(true);
     }
 
@@ -38,7 +55,7 @@ app.intent('versusIntent', {
 
     var weakAgainstUnit = unit.weakAgainst[species];
 
-    res.say("Als " + species + " baue " + weakAgainstUnit + " gegen " + unitName);
+    res.say("As " + species + " build " + weakAgainstUnit + " against " + unitName);
 });
 
 //hack to support custom utterances in utterance expansion string
