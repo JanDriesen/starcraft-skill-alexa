@@ -1,0 +1,14 @@
+{
+  "name": "starcraft-skill-alexa",
+  "version": "1.0.0",
+  "description": "Skill to get informations about StarCraft units",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Jan Driesen",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-app": "^4.2.2"
+  }
+}
