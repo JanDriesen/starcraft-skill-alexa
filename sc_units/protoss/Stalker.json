@@ -1,0 +1,42 @@
+{
+    "name": "Stalker",
+    "description": "Ranged support strider.",
+    "shortcut": "S",
+    "requirements": [
+        "Warp Gate",
+        "RESEARCH"
+    ],
+    "canAttack": [
+        "ground",
+        "air"
+    ],
+    "shields": 80,
+    "life": 80,
+    "armor": 1,
+    "energy": 0,
+    "abilities": [{
+        "name": "Blink",
+        "shortcut": "B",
+        "description": "Teleports the Stalker to a nearby target location. Ability can only be used once every 7 seconds.",
+        "requirements": [
+            "upgrades: Research Blink"
+        ]
+    }],
+    "strongAgainst": {
+        "terran": "Reaper",
+        "zerg": "Corruptor",
+        "protoss": "Tempest"
+
+    },
+    "weakAgainst": {
+        "terran": "Marauder",
+        "zerg": "Zergling",
+        "protoss": "Immortal"
+    },
+    "upgrades": [{
+        "name": "Research Blink",
+        "requirements": [
+            "buildings: RESEARCH"
+        ]
+    }]
+}

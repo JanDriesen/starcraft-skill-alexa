@@ -1,0 +1,34 @@
+{
+    "name": "Probe",
+    "description": "Basic worker unit. Can gather resources and warp in Protoss structures",
+    "shortcut": "P",
+    "requirements": [
+        "Basis"
+    ],
+    "canAttack": [
+        "ground"
+    ],
+    "shields": 20,
+    "life": 20,
+    "armor": 0,
+    "energy": 0,
+    "abilities": [{
+        "name": "Gather",
+        "shortcut": "G",
+        "description": "Orders Probe to gather resources",
+        "requirements": "Basis"
+    }, {
+        "name": "Warp in Structure",
+        "shortcut": "B",
+        "description": "A list of basic structures",
+        "requirements": "Basis"
+    }, {
+        "name": "Warp in Advanced Structure",
+        "shortcut": "V",
+        "description": "A list of advanced structures",
+        "requirements": "Basis"
+    }],
+    "strongAgainst": {},
+    "weakAgainst": {},
+    "upgrades": []
+}

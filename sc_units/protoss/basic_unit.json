@@ -1,0 +1,39 @@
+{
+    "unit": {
+        "name": "Unit Name",
+        "description": "Unit description",
+        "shortcut": "Unit shortcut",
+        "requirements": {
+            "buildings": ["String Building Names"]
+        },
+        "canAttack": ["string 'ground' or 'air'"],
+        "shields": 0,
+        "life": 0,
+        "armor": 0,
+        "energy": 0,
+        "abilities": ["Array of Ability objects"],
+        "strongAgainst": {
+            "terran": "Terran Unit name",
+            "zerg": "Zerg Unit name",
+            "protoss": "Protoss Unit name"
+        },
+        "weakAgainst": {
+            "terran": "Terran Unit name",
+            "zerg": "Zerg Unit name",
+            "protoss": "Protoss Unit name"
+        },
+        "upgrades": ["Array of upgrade objects"]
+    },
+    "ability" : {
+        "name": "ability name",
+        "shortcut": "ability shortcut",
+        "description": "ability description",
+        "requirements": ["ability requirement"]
+    },
+    "upgrade" : {
+        "name": "ability name",
+        "shortcut": "ability shortcut",
+        "description": "ability description",
+        "requirements": ["ability requirement"]
+    }
+}

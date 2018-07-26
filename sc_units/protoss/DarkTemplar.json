@@ -1,0 +1,55 @@
+{
+    "name": "Dark Templar",
+    "description": "Deadly warrior assassin. Cloak renders the unit invisible to enemies without detection. Can transform into an Archon",
+    "shortcut": "",
+    "requirements": {
+        "buildings": [
+            "Warp Gate", 
+            "Dark Temple"
+        ]
+    },
+    "canAttack": [
+        "ground"
+    ],
+    "shields": 80,
+    "life": 40,
+    "armor": 1,
+    "energy": 0,
+    "abilities": [{
+        "name": "Invisible",
+        "shortcut": "passive",
+        "description": "Allows Zealots to intercept nearby enemies. Increases the movement speed of Zealots.",
+        "requirements": []
+    }, {
+        "name": "Shadow Stride",
+        "shortcut": "B",
+        "description": "Allows Dark Templars to teleport to a nearby target location.",
+        "requirements": [
+            "upgrades: Research Shadow Stride"
+        ]
+    }, {
+        "name": "Archon Merge",
+        "shortcut": "C",
+        "description": "Sacrifices 2 Templar to create an Archon.",
+        "requirements": [
+            "upgrades: Archon Merge RESEARCH"
+        ]
+    }],
+    "strongAgainst": {
+        "terran": "W. B. F.",
+        "zerg": "Drone",
+        "protoss": "Probe"
+    },
+    "weakAgainst": {
+        "terran": "Raven",
+        "zerg": "Overseer",
+        "protoss": "Observer"
+    },
+    "upgrades": [{
+        "name": "Research Shadow Stride",
+        "requirements": [
+            "buildings: Dark Temple"
+        ],
+        "ability": "Shadow Stride"
+    }]
+}
