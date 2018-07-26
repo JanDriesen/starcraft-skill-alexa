@@ -1,0 +1,41 @@
+{
+    "species": "Terran",
+    "name": "Marine",
+    "description": "Powerful melee warrior",
+    "shortcut": "",
+    "requirements": [
+        "Warp Gate"
+    ],
+    "canAttack": [
+        "ground"
+    ],
+    "shields": 50,
+    "life": 100,
+    "armor": 1,
+    "energy": 0,
+    "abilities": [{
+        "name": "Charge",
+        "shortcut": "C",
+        "description": "Allows Zealots to intercept nearby enemies. Increases the movement speed of Zealots.",
+        "requirements": [
+            "upgrades: Research Charge"
+        ]
+    }],
+    "strongAgainst": {
+        "terran": "Marauder",
+        "zerg": "Zergling",
+        "protoss": "Immortal"
+    },
+    "weakAgainst": {
+        "terran": "Hellbat",
+        "zerg": "Roach",
+        "protoss": "Colossus"
+    },
+    "upgrades": [{
+        "name": "Research Charge",
+        "requirements": [
+            "buildings: Twilight Council"
+        ],
+        "ability": "Charge"
+    }]
+}
